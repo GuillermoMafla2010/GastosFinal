@@ -27,7 +27,7 @@ const routes: Routes = [
           }
         ]
       },
-     /* {
+      {
         path: 'gastos',
         children: [
           {
@@ -36,7 +36,7 @@ const routes: Routes = [
               import('../componentes/gastos/gastos.module').then(m => m.GastosPageModule)
           }
         ]
-      },*/
+      },
 
       {
         path: 'ahorros',
