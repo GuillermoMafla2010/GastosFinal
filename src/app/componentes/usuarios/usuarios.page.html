@@ -1,0 +1,44 @@
+<ion-header color="primary">
+  <ion-toolbar color="primary">
+    <ion-title class="centrado">Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="margen">
+    <ion-card-content color="light">
+      <ion-card-title class="centrado">Detalles de Usuario</ion-card-title>
+      
+          <ion-list *ngIf="usuarios">
+              <ion-item>Nombre: {{usuarios.nombre}}</ion-item>
+              <ion-item>Email: {{usuarios.email}}</ion-item>
+              <ion-item>Celular: {{usuarios.celular}}</ion-item>
+
+            </ion-list>
+  
+
+      
+            </ion-card-content>  
+  </ion-card>
+
+
+  <ion-list>
+      <ion-list-header>Registro Total</ion-list-header>
+      <ion-item>
+        <ion-label>Ingresos</ion-label>
+        <ion-badge color="success" slot="end"> $ {{sumaingresos | number:"1.0-2"}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gastos</ion-label>
+        <ion-badge color="danger" slot="end">$ {{sumagastos | number:"1.0-2" }}</ion-badge>
+      </ion-item>
+      <ion-item>
+          <ion-label>Total</ion-label>
+          <ion-badge color="secondary" slot="end">$ {{sumaingresos-sumagastos | number:"1.0-2"}}</ion-badge>
+        </ion-item>
+    </ion-list>
+
+    <ion-icon name="create" slot="end"></ion-icon>
+  
+
+</ion-content>
